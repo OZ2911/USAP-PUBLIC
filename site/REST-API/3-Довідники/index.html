@@ -1,0 +1,1270 @@
+
+<!doctype html>
+<html lang="uk" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Документація REST API для зовнішніх систем">
+      
+      
+      
+      
+        <link rel="prev" href="../2-%D0%A1%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0-%D0%B5%D0%BD%D0%B4%D0%BF%D0%BE%D1%96%D0%BD%D1%82%D1%96%D0%B2/">
+      
+      
+        <link rel="next" href="../4-%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Довідники - USAP REST API</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cobj_" class="md-skip">
+          Перейти до змісту
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Хедер">
+    <a href="../.." title="USAP REST API" class="md-header__button md-logo" aria-label="USAP REST API" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            USAP REST API
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Довідники
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Пошук" placeholder="Пошук" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Шукати">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистити" aria-label="Очистити" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Пошук розпочато
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навігація" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="USAP REST API" class="md-nav__button md-logo" aria-label="USAP REST API" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    USAP REST API
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Огляд
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    REST API
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    REST API
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-%D0%90%D0%B2%D1%82%D0%B5%D0%BD%D1%82%D0%B8%D1%84%D1%96%D0%BA%D0%B0%D1%86%D1%96%D1%8F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Автентифікація
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2-%D0%A1%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0-%D0%B5%D0%BD%D0%B4%D0%BF%D0%BE%D1%96%D0%BD%D1%82%D1%96%D0%B2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Структура ендпоінтів
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Довідники
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Довідники
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Search
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Параметри запиту
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Параметр ft — рівень заповнення
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Параметр rf — бітові прапорці пошуку
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Приклади
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Формат відповіді
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="List">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Параметри запиту
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Формат відповіді
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#save" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Save
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Save">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-usap-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Поля-посилання на USAP-об'єкти
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Створення нового елемента
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Оновлення існуючого елемента
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Формат відповіді
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definition
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Документи
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5-Definition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Definition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6-%D0%97%D0%B0%D0%BB%D0%B8%D1%88%D0%BA%D0%B8-%28productresidue%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Залишки товарів
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7-%D0%97%D0%B2%D1%96%D1%82%D0%B8-%28analysisReport%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Аналітичні звіти
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Search
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Параметри запиту
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Параметр ft — рівень заповнення
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Параметр rf — бітові прапорці пошуку
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Приклади
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Формат відповіді
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="List">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Параметри запиту
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Формат відповіді
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#save" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Save
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Save">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-usap-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Поля-посилання на USAP-об'єкти
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Створення нового елемента
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Оновлення існуючого елемента
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Формат відповіді
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definition
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="cobj_">Довідники (cobj_*)</h1>
+<p>Довідники — це об'єкти-каталоги системи: номенклатура, контрагенти, склади, валюти тощо. Дані довідників кешуються in-memory на сервері. Контролери мають префікс <code>cobj_</code>, але в URL використовується скорочена назва (наприклад, <code>nomenclature</code>, <code>kontragent</code>, <code>storage</code>).</p>
+<hr />
+<h2 id="search">Search</h2>
+<p><strong>POST</strong> <code>/{controllerName}/search/</code></p>
+<p>Повертає список елементів довідника за заданими критеріями. Результат береться з серверного кешу.</p>
+<h3 id="_1">Параметри запиту</h3>
+<pre><code class="language-json">{
+    &quot;q&quot;: &quot;пошуковий рядок&quot;,
+    &quot;ft&quot;: &quot;full&quot;,
+    &quot;rf&quot;: 0,
+    &quot;f&quot;: 0,
+    &quot;df&quot;: 1,
+    &quot;mci&quot;: 100,
+    &quot;pa&quot;: null,
+    &quot;own&quot;: null,
+    &quot;gst&quot;: false
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Опис</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>q</code></td>
+<td>string</td>
+<td>Пошуковий запит. Якщо не вказано — повертає всі доступні елементи (до ліміту <code>mci</code>)</td>
+</tr>
+<tr>
+<td><code>ft</code></td>
+<td>string</td>
+<td>Рівень заповнення полів у відповіді: <code>"full"</code>, <code>"small"</code>, <code>"forlist"</code>, <code>"none"</code></td>
+</tr>
+<tr>
+<td><code>rf</code></td>
+<td>int</td>
+<td>Бітові прапорці пошуку (детально нижче)</td>
+</tr>
+<tr>
+<td><code>f</code></td>
+<td>int</td>
+<td>Бітовий фільтр за <code>flags</code> — вказані біти повинні бути <strong>присутні</strong></td>
+</tr>
+<tr>
+<td><code>df</code></td>
+<td>int</td>
+<td>Бітовий фільтр за <code>flags</code> — вказані біти повинні бути <strong>відсутні</strong>. Типово <code>df: 1</code> щоб виключити видалені</td>
+</tr>
+<tr>
+<td><code>mci</code></td>
+<td>int</td>
+<td>Max count items — максимальна кількість результатів. За замовчуванням визначається сервером</td>
+</tr>
+<tr>
+<td><code>pa</code></td>
+<td>GUID | null</td>
+<td>Parent — для ієрархічних довідників: обмежити пошук у межах батьківського елемента</td>
+</tr>
+<tr>
+<td><code>own</code></td>
+<td>GUID | null</td>
+<td>Owner — для об'єктів з власником (наприклад, штрихкоди номенклатури)</td>
+</tr>
+<tr>
+<td><code>gst</code></td>
+<td>bool</td>
+<td>Get SubTree — <code>true</code> щоб рекурсивно шукати серед всіх нащадків <code>pa</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="ft">Параметр <code>ft</code> — рівень заповнення</h3>
+<table>
+<thead>
+<tr>
+<th>Значення</th>
+<th>Опис</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>"full"</code></td>
+<td>Повна модель — всі поля заповнені</td>
+</tr>
+<tr>
+<td><code>"small"</code></td>
+<td>Скорочена модель — мінімальний набір полів (id, caption)</td>
+</tr>
+<tr>
+<td><code>"forlist"</code></td>
+<td>Рівень для відображення в списку — проміжний між <code>small</code> та <code>full</code></td>
+</tr>
+<tr>
+<td><code>"none"</code></td>
+<td>Не повертати об'єкти в <code>data</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="rf">Параметр <code>rf</code> — бітові прапорці пошуку</h3>
+<table>
+<thead>
+<tr>
+<th>Біт</th>
+<th>Опис</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>8</code></td>
+<td>Для ієрархічних довідників: шукати не лише на поточному рівні, але й у всіх вкладених</td>
+</tr>
+<tr>
+<td><code>16</code></td>
+<td>Для ієрархічних довідників: ігнорувати фільтр за батьком <code>pa</code></td>
+</tr>
+<tr>
+<td><code>64</code></td>
+<td>Пошук за числовим id або службовим полем</td>
+</tr>
+<tr>
+<td><code>1048576</code></td>
+<td>Відключити розбивку запиту на слова (шукати рядок цілком)</td>
+</tr>
+<tr>
+<td><code>2097152</code></td>
+<td>Обов'язкове збігання довжини — точний збіг рядка</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Точний пошук</strong> (наприклад, за кодом чи артикулом):</p>
+<pre><code class="language-json">{ &quot;q&quot;: &quot;ABC-001&quot;, &quot;rf&quot;: 3145728, &quot;ft&quot;: &quot;full&quot; }
+</code></pre>
+<p>де <code>3145728 = 1048576 + 2097152</code></p>
+<h3 id="_2">Приклади</h3>
+<pre><code class="language-json">POST /nomenclature/search/
+
+{ &quot;q&quot;: &quot;кава&quot;, &quot;ft&quot;: &quot;full&quot; }
+</code></pre>
+<pre><code class="language-json">POST /storage/search/
+
+{ &quot;ft&quot;: &quot;full&quot;, &quot;mci&quot;: 2000000 }
+</code></pre>
+<pre><code class="language-json">POST /nomenclature/search/
+
+{ &quot;ft&quot;: &quot;forlist&quot;, &quot;pa&quot;: &quot;guid-батьківської-групи&quot;, &quot;gst&quot;: true, &quot;mci&quot;: 200000000 }
+</code></pre>
+<h3 id="_3">Формат відповіді</h3>
+<pre><code class="language-json">{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: &quot;3fa85f64-5717-4562-b3fc-2c963f66afa6&quot;,
+            &quot;c&quot;: &quot;Кава Арабіка 250г&quot;,
+            &quot;flags&quot;: 0
+        }
+    ],
+    &quot;message&quot;: null,
+    &quot;sw&quot;: 5
+}
+</code></pre>
+<hr />
+<h2 id="list">List</h2>
+<p><strong>POST</strong> <code>/{controllerName}/list/</code></p>
+<p>Повертає повні моделі елементів довідника за переліком ідентифікаторів. Дані беруться з кешу.</p>
+<h3 id="_4">Параметри запиту</h3>
+<pre><code class="language-json">{
+    &quot;ft&quot;: &quot;full&quot;,
+    &quot;ids&quot;: [
+        { &quot;id&quot;: &quot;3fa85f64-5717-4562-b3fc-2c963f66afa6&quot; },
+        { &quot;id&quot;: &quot;7c9e6679-7425-40de-944b-e07fc1f90ae7&quot; }
+    ]
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Опис</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ft</code></td>
+<td>string</td>
+<td>Рівень заповнення полів</td>
+</tr>
+<tr>
+<td><code>ids</code></td>
+<td>array</td>
+<td>Масив об'єктів з полем <code>id</code> (internalGuid)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_5">Формат відповіді</h3>
+<pre><code class="language-json">{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: &quot;3fa85f64-5717-4562-b3fc-2c963f66afa6&quot;,
+            &quot;c&quot;: &quot;Кава Арабіка 250г&quot;,
+            &quot;flags&quot;: 0,
+            &quot;parent&quot;: { &quot;id&quot;: &quot;...&quot;, &quot;c&quot;: &quot;Кава&quot; }
+        }
+    ],
+    &quot;message&quot;: null,
+    &quot;sw&quot;: 3
+}
+</code></pre>
+<p>Порядок елементів у <code>data</code> відповідає порядку в <code>ids</code>. Якщо об'єкт не знайдений — він відсутній у відповіді.</p>
+<hr />
+<h2 id="save">Save</h2>
+<p><strong>POST</strong> <code>/{controllerName}/save/</code></p>
+<p>Для довідників <code>save</code> виконує <strong>повне збереження</strong> — передається вся модель елемента.</p>
+<h3 id="-usap-">Поля-посилання на USAP-об'єкти</h3>
+<p>Поля, що посилаються на інші сутності системи, приймають <strong>лише значення <code>id</code></strong> (internalGuid) цільового об'єкта у вигляді GUID-рядка — не повний об'єкт.</p>
+<pre><code class="language-json">&quot;назва_поля&quot;: &quot;3fa85f64-5717-4562-b3fc-2c963f66afa6&quot;
+</code></pre>
+<h3 id="_6">Створення нового елемента</h3>
+<p>Передати <code>id: null</code> або не передавати поле <code>id</code>:</p>
+<pre><code class="language-json">POST /kontragent/save/
+
+{
+    &quot;data&quot;: {
+        &quot;id&quot;: null,
+        &quot;c&quot;: &quot;ТОВ Нова Компанія&quot;,
+        &quot;flags&quot;: 0,
+        &quot;edrpou&quot;: &quot;12345678&quot;
+    },
+    &quot;ft&quot;: &quot;full&quot;
+}
+</code></pre>
+<h3 id="_7">Оновлення існуючого елемента</h3>
+<pre><code class="language-json">POST /kontragent/save/
+
+{
+    &quot;data&quot;: {
+        &quot;id&quot;: &quot;3fa85f64-5717-4562-b3fc-2c963f66afa6&quot;,
+        &quot;c&quot;: &quot;ТОВ Оновлена Компанія&quot;,
+        &quot;flags&quot;: 0,
+        &quot;edrpou&quot;: &quot;12345678&quot;
+    },
+    &quot;ft&quot;: &quot;full&quot;
+}
+</code></pre>
+<h3 id="_8">Формат відповіді</h3>
+<pre><code class="language-json">{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: &quot;3fa85f64-5717-4562-b3fc-2c963f66afa6&quot;,
+            &quot;c&quot;: &quot;ТОВ Оновлена Компанія&quot;,
+            &quot;flags&quot;: 0
+        }
+    ],
+    &quot;message&quot;: null,
+    &quot;sw&quot;: 8
+}
+</code></pre>
+<p>Якщо <code>message</code> не <code>null</code> — збереження не відбулося, значення містить причину.</p>
+<hr />
+<h2 id="definition">Definition</h2>
+<p><strong>POST</strong> <code>/{controllerName}/definition/</code></p>
+<p>Повертає повний опис структури типу: поля, їхні типи, мітки, посилання на контролери. Використовується для розуміння моделі при інтеграції.</p>
+<p>Детально описано у розділі <a href="../5-Definition/">Definition</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Повернутись нагору
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0456\u0439\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u0421\u043a\u043e\u043f\u0456\u044e\u0432\u0430\u0442\u0438 \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0429\u0435 1 \u0437\u0431\u0456\u0433 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.more.other": "\u0429\u0435 # \u0437\u0431\u0456\u0433\u0456\u0432 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.none": "\u0417\u0431\u0456\u0433\u0456\u0432 \u043d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0437\u0431\u0456\u0433", "search.result.other": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e # \u0437\u0431\u0456\u0433\u0456\u0432", "search.result.placeholder": "\u0420\u043e\u0437\u043f\u043e\u0447\u043d\u0456\u0442\u044c \u043f\u0438\u0441\u0430\u0442\u0438 \u0434\u043b\u044f \u043f\u043e\u0448\u0443\u043a\u0443", "search.result.term.missing": "\u041d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e \u0437\u0430\u043f\u0438\u0442\u0443", "select.version": "\u041e\u0431\u0440\u0430\u0442\u0438 \u0432\u0435\u0440\u0441\u0456\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
