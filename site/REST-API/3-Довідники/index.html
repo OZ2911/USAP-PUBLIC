@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cobj_" class="md-skip">
+        <a href="#_1" class="md-skip">
           Перейти до змісту
         </a>
       
@@ -415,7 +415,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         Параметри запиту
@@ -448,7 +448,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         Приклади
@@ -459,7 +459,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         Формат відповіді
@@ -487,7 +487,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
         Параметри запиту
@@ -498,7 +498,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
         Формат відповіді
@@ -537,7 +537,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
         Створення нового елемента
@@ -548,7 +548,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       
         Оновлення існуючого елемента
@@ -559,7 +559,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       
         Формат відповіді
@@ -752,7 +752,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         Параметри запиту
@@ -785,7 +785,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         Приклади
@@ -796,7 +796,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         Формат відповіді
@@ -824,7 +824,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
         Параметри запиту
@@ -835,7 +835,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
         Формат відповіді
@@ -874,7 +874,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
         Створення нового елемента
@@ -885,7 +885,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       
         Оновлення існуючого елемента
@@ -896,7 +896,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       
         Формат відповіді
@@ -939,13 +939,13 @@
 
 
 
-<h1 id="cobj_">Довідники (cobj_*)</h1>
-<p>Довідники — це об'єкти-каталоги системи: номенклатура, контрагенти, склади, валюти тощо. Дані довідників кешуються in-memory на сервері. Контролери мають префікс <code>cobj_</code>, але в URL використовується скорочена назва (наприклад, <code>nomenclature</code>, <code>kontragent</code>, <code>storage</code>).</p>
+<h1 id="_1">Довідники</h1>
+<p>Довідники — це об'єкти-каталоги системи: номенклатура, контрагенти, склади, валюти тощо. Назва контролера вказана у полі <code>ocontroller</code> відповіді <code>definition</code>.</p>
 <hr />
 <h2 id="search">Search</h2>
 <p><strong>POST</strong> <code>/{controllerName}/search/</code></p>
-<p>Повертає список елементів довідника за заданими критеріями. Результат береться з серверного кешу.</p>
-<h3 id="_1">Параметри запиту</h3>
+<p>Повертає список елементів довідника за заданими критеріями.</p>
+<h3 id="_2">Параметри запиту</h3>
 <pre><code class="language-json">{
     &quot;q&quot;: &quot;пошуковий рядок&quot;,
     &quot;ft&quot;: &quot;full&quot;,
@@ -1076,7 +1076,7 @@
 <pre><code class="language-json">{ &quot;q&quot;: &quot;ABC-001&quot;, &quot;rf&quot;: 3145728, &quot;ft&quot;: &quot;full&quot; }
 </code></pre>
 <p>де <code>3145728 = 1048576 + 2097152</code></p>
-<h3 id="_2">Приклади</h3>
+<h3 id="_3">Приклади</h3>
 <pre><code class="language-json">POST /nomenclature/search/
 
 { &quot;q&quot;: &quot;кава&quot;, &quot;ft&quot;: &quot;full&quot; }
@@ -1089,7 +1089,7 @@
 
 { &quot;ft&quot;: &quot;forlist&quot;, &quot;pa&quot;: &quot;guid-батьківської-групи&quot;, &quot;gst&quot;: true, &quot;mci&quot;: 200000000 }
 </code></pre>
-<h3 id="_3">Формат відповіді</h3>
+<h3 id="_4">Формат відповіді</h3>
 <pre><code class="language-json">{
     &quot;data&quot;: [
         {
@@ -1105,8 +1105,8 @@
 <hr />
 <h2 id="list">List</h2>
 <p><strong>POST</strong> <code>/{controllerName}/list/</code></p>
-<p>Повертає повні моделі елементів довідника за переліком ідентифікаторів. Дані беруться з кешу.</p>
-<h3 id="_4">Параметри запиту</h3>
+<p>Повертає елементи довідника за переліком ідентифікаторів.</p>
+<h3 id="_5">Параметри запиту</h3>
 <pre><code class="language-json">{
     &quot;ft&quot;: &quot;full&quot;,
     &quot;ids&quot;: [
@@ -1136,7 +1136,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="_5">Формат відповіді</h3>
+<h3 id="_6">Формат відповіді</h3>
 <pre><code class="language-json">{
     &quot;data&quot;: [
         {
@@ -1159,7 +1159,7 @@
 <p>Поля, що посилаються на інші сутності системи, приймають <strong>лише значення <code>id</code></strong> (internalGuid) цільового об'єкта у вигляді GUID-рядка — не повний об'єкт.</p>
 <pre><code class="language-json">&quot;назва_поля&quot;: &quot;3fa85f64-5717-4562-b3fc-2c963f66afa6&quot;
 </code></pre>
-<h3 id="_6">Створення нового елемента</h3>
+<h3 id="_7">Створення нового елемента</h3>
 <p>Передати <code>id: null</code> або не передавати поле <code>id</code>:</p>
 <pre><code class="language-json">POST /kontragent/save/
 
@@ -1173,7 +1173,7 @@
     &quot;ft&quot;: &quot;full&quot;
 }
 </code></pre>
-<h3 id="_7">Оновлення існуючого елемента</h3>
+<h3 id="_8">Оновлення існуючого елемента</h3>
 <pre><code class="language-json">POST /kontragent/save/
 
 {
@@ -1186,7 +1186,7 @@
     &quot;ft&quot;: &quot;full&quot;
 }
 </code></pre>
-<h3 id="_8">Формат відповіді</h3>
+<h3 id="_9">Формат відповіді</h3>
 <pre><code class="language-json">{
     &quot;data&quot;: [
         {
